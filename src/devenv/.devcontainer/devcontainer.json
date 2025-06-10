@@ -2,17 +2,22 @@
     "name": "Development Environment",
     "build": {
         "dockerfile": "Dockerfile",
-        "context": ".",
-        "args": {
-            "devcontainercli": "true",
-        }
+        "context": "."
     },
-    "imageVariant": "noble",
-    "goVersion": "1.24",
-    "nodeVersion": "24",
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2.12.2": {},
-        "ghcr.io/devcontainers/features/common-utils:2.5.3": {},
+        "ghcr.io/devcontainers/features/common-utils:2.5.3": {
+            "installOhMyZsh": "true",
+            "installOhMyZshPlugins": "true",
+            "configureZshAsDefaultShell": "true",
+            "nonFreePackages": "true",
+            "upgradePackages": "true",
+            "username": "dev",
+            "userGid": "10001",
+            "userUid": "10001",
+            "installZsh": "true",
+            "installOhMyZshConfig": "true",
+        },
         "ghcr.io/jsburckhardt/devcontainer-features/ruff:1": {},
         "ghcr.io/jsburckhardt/devcontainer-features/codex:1": {},
         "ghcr.io/flexwie/devcontainer-features/op:1": {},

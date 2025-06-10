@@ -1,8 +1,5 @@
 # [Choice] Ubuntu version (use noble on local arm64/Apple Silicon)
-FROM mcr.microsoft.com/devcontainers/base:${templateOption:imageVariant} AS base
-
-ARG devcontainercli
-RUN if [[ -z "$devcontainercli" ]] ; then printf "\nERROR: This Dockerfile needs to be built with VS Code !" && exit 1; else printf "VS Code is detected: $devcontainercli"; fi
+FROM mcr.microsoft.com/devcontainers/base:noble AS base
 
 RUN apt-get update && apt-get upgrade -y && export DEBIAN_FRONTEND=noninteractive && apt-get install -y --no-install-recommends \
     curl \
@@ -68,7 +65,7 @@ RUN wget https://github.com/digitalocean/doctl/releases/download/v1.124.0/doctl-
     && rm doctl-1.124.0-linux-amd64.tar.gz
 
 # Development Environment
-FROM mcr.microsoft.com/devcontainers/base:${templateOption:imageVariant} AS devenv
+FROM mcr.microsoft.com/devcontainers/base:noble AS devenv
 
 ENV GOPATH="/go"
 
