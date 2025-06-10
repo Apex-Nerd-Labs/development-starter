@@ -34,7 +34,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Set up Dev Container CI
-        uses: devcontainers/ci@v1
+        uses: devcontainers/ci@v0.3
         with:
             subFolder: ./src/devenv/.devcontainer
             imageName: ${{ env.REGISTRY }}/${{ github.actor }}/${{ env.PACKAGE_NAME }}
