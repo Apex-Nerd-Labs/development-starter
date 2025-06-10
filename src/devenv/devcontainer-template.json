@@ -1,0 +1,42 @@
+{
+    "id": "devenv",
+    "version": "1.0.0",
+    "name": "Development Environment",
+    "description": "A template to setup a development environment",
+    "documentationURL": "https://github.com/devcontainers/template-starter/tree/main/src/devenv",
+    "licenseURL": "https://github.com/devcontainers/template-starter/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Ubuntu version (use noble on local arm64/Apple Silicon):",
+            "proposals": [
+                "jammy",
+                "noble"
+            ],
+            "default": "noble"
+        },
+        "goVersion": {
+            "type": "string",
+            "description": "Go version (use 1.24 on local arm64/Apple Silicon):",
+            "proposals": [
+                "1.22",
+                "1.23",
+                "1.24"
+            ],
+            "default": "1.24"
+        },
+        "nodeVersion": {
+            "type": "string",
+            "description": "Node version (use 20 on local arm64/Apple Silicon):",
+            "proposals": [
+                "20",
+                "22",
+                "24"
+            ],
+            "default": "24"
+        }
+    },
+    "platforms": [
+        "Any"
+    ]
+}
