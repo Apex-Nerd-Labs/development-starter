@@ -29,7 +29,6 @@
         "ghcr.io/devcontainers-extra/features/pre-commit:2":{},
         "ghcr.io/devcontainers-extra/features/starship:1":{},
         "ghcr.io/devcontainers-extra/features/ts-node:1":{},
-        "ghcr.io/devcontainers-extra/features/vscode-server:1":{},
         "ghcr.io/dhoeric/features/google-cloud-cli:1":{},
         "ghcr.io/joshuanianji/devcontainer-features/gcloud-cli-persistence:1":{}
     }
