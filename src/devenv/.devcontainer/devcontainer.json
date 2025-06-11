@@ -1,0 +1,35 @@
+{
+    "name": "Development Environment",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2.12.2": {},
+        "ghcr.io/devcontainers/features/common-utils:2.5.3": {
+            "installOhMyZsh": "true",
+            "installOhMyZshPlugins": "true",
+            "configureZshAsDefaultShell": "true",
+            "nonFreePackages": "true",
+            "upgradePackages": "true",
+            "username": "dev",
+            "userGid": "10001",
+            "userUid": "10001",
+            "installZsh": "true",
+            "installOhMyZshConfig": "true",
+        },
+        "ghcr.io/jsburckhardt/devcontainer-features/ruff:1": {},
+        "ghcr.io/jsburckhardt/devcontainer-features/codex:1": {},
+        "ghcr.io/flexwie/devcontainer-features/op:1": {},
+        "ghcr.io/devcontainers-community/features/deno:1": {},
+        "ghcr.io/devcontainers-community/npm-features/typescript:1": {},
+        "ghcr.io/devcontainers-community/npm-features/prettier:1":{},
+        "ghcr.io/devcontainers-extra/features/corepack:1":{},
+        "ghcr.io/devcontainers-extra/features/pnpm:2":{},
+        "ghcr.io/devcontainers-extra/features/pre-commit:2":{},
+        "ghcr.io/devcontainers-extra/features/starship:1":{},
+        "ghcr.io/devcontainers-extra/features/ts-node:1":{},
+        "ghcr.io/dhoeric/features/google-cloud-cli:1":{},
+        "ghcr.io/joshuanianji/devcontainer-features/gcloud-cli-persistence:1":{}
+    }
+}
